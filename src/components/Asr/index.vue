@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {ref} from "vue";
 import Iat from "./iat";
+import nlp from '../NLP/index'
 
 type Status = "UNDEFINED" | "OPEN" | "CLOSING" | "CLOSED";
 
@@ -27,7 +28,7 @@ Iat.onWillStatusChange = (oldStatus: Status, newStatus: Status) => {
 Iat.onTextChange = (text: string) => {
   asrText.value = text;
 };
-
+(new nlp()).auth()
 </script>
 
 <template>
