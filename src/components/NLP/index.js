@@ -2,7 +2,7 @@ import {md5} from "js-md5";
 import recorder from "../Asr/iat.js";
 // 如下url,可以测试环境、生产环境使用
 const authInfoUrl = "https://vdh-api.test.yingzi.com/haigate/api/v1/haiAuthorize"
-const queryNlpUrl = " https://vdh-api.test.yingzi.com/haigate/api/v1/haiQtxt2Anim"
+const queryNlpUrl = "https://vdh-api.test.yingzi.com/haigate/api/v1/haiQtxt2Anim"
 const AppId = "6006805041792430"
 const APPkey = "TTZ92YT1mSDRLSGs5Mv1bMYJ"
 const AppSecret = "qBHOHn8OUHc17ulW756E2YmcpuMVqNnh"
