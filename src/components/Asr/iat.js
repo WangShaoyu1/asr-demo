@@ -1,4 +1,5 @@
 import CryptoJS from "crypto-js";
+import {getAnswerFromDify} from '../NLP/index'
 
 //APPID，APISecret，APIKey在控制台-我的应用-语音听写（流式版）页面获取
 const APPID = "a327ed87";
@@ -168,6 +169,9 @@ recorder.onFrameRecorded = ({isLastFrame, frameBuffer}) => {
     }
 };
 recorder.onStop = () => {
+    // resultText 是拾音结束后的 文本；作为输入传到 另一个NLP处理接口
+    console.log("recorder.stop:", resultText);
+    getAnswerFromDify(resultText)
 };
 
 // btnControl.onclick = function () {
