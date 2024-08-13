@@ -11,5 +11,6 @@
 
 # 3、注意事项
 1. 点击开始唤醒的按钮后会一直拾音，使用了Web Speech API，其依赖谷歌服务，需使用科学上网
-2. 唤醒词是【小影】，匹配逻辑在isMatch，里面的命中算法按需优化
+   https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Speech_API
+2. 唤醒词是【小影】，匹配逻辑在isMatch，里面的命中算法按需优化，命中唤醒词后开始调用第三方语音识别服务
 
