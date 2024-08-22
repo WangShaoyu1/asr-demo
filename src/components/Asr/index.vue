@@ -9,8 +9,10 @@ const asrText = ref("");
 const status = ref<Status>("UNDEFINED")
 
 const start = () => {
-  asrText.value = ''
-  Iat.connectWebSocket();
+  if (["UNDEFINED", "CLOSED"].includes(Iat.getStatus())) {
+    asrText.value = "";
+    Iat.connectWebSocket();
+  }
 };
 
 const stop = () => {
