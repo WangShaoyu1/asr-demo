@@ -31,6 +31,12 @@ Iat.onTextChange = (text: string) => {
   asrText.value = text;
 };
 
+/**
+ * 判断输入的文本是否以“xi”开头，且倒数第二个字拼音首字母为“yǐn”、“yīn”或“yín”
+ *
+ * @param texts 输入的文本，默认为空字符串
+ * @returns 返回布尔值，若符合上述条件则返回true，否则返回false
+ */  
 const isMatch = (texts = '') => {
   if (texts.length < 2) {
     return false
